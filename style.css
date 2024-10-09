@@ -11,3 +11,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.note{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: 15px;
+}
