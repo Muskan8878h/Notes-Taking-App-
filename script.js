@@ -34,7 +34,13 @@ const addNote = () => {
         }
     )
 
-    
+    // to save the notes
+    note.querySelector("save").addEventListener(
+        "click",
+        function(){
+            saveNotes();
+        }
+    )
 
     // to add the note 
     main.appendChild(note); 
