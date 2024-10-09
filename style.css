@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 
-.main{
+#main{
     width: 100%;
     min-height: 100vh;
     background-color: #81ecec;
+    display: flex;
+    flex-wrap: wrap;
 }
