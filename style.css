@@ -17,6 +17,7 @@
     height: 400px;
     background-color: white;
     margin: 15px;
+    margin-top: 55px;
 }
 
 .tool{
@@ -45,4 +46,16 @@
 .note textarea:focus{
     border: 0;
     outline: 0;
+}
+
+#addbtn{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: #2d3436;
+    color: white;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
 }
