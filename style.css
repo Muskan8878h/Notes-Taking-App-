@@ -24,4 +24,11 @@
     background-color: #2d3436;
     color: white;
     padding: 5px;
+    display: flex;
+    justify-content: end;
+}
+
+.tool i{
+    padding: 5px;
+    cursor: pointer; 
 }
