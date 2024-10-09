@@ -1,5 +1,6 @@
 const addBtn = document.querySelector("#addbtn")
 const main = document.querySelector("#main")
+
 addBtn.addEventListener(
     "click",
     function() {
@@ -14,7 +15,8 @@ addBtn.addEventListener(
 //         <i class="fas fa-save"></i>
 //     </div>
 //     <textarea></textarea>
-// </div> 
+// </div>
+
 const addNote = () => {
     const note = document.createElement("div");
     note.classList.add("note");
@@ -35,7 +37,7 @@ const addNote = () => {
     )
 
     // to save the notes
-    note.querySelector("save").addEventListener(
+    note.querySelector(".save").addEventListener(
         "click",
         function(){
             saveNotes();
@@ -44,4 +46,21 @@ const addNote = () => {
 
     // to add the note 
     main.appendChild(note); 
+    saveNotes();
+}
+
+
+// to save the notes
+const saveNotes = () => {
+    const notes = document.querySelectorAll(".note textarea");
+    const data = [];
+    // console.log(notes);
+    notes.forEach(
+        (note) => {
+            data.push(note.value);
+        }
+    )
+    
+    // console.log(data);
+    localStorage.setItem("notes",JSON.stringify(data));
 }
