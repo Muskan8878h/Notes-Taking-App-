@@ -1,6 +1,14 @@
-const addBtn = document.querySelector("#addbtn")
+const addBtn = document.querySelector("#addBtn")
 const main = document.querySelector("#main")
 
+
+
+addBtn.addEventListener(
+    "click",
+    function() {
+        addNote();
+    }
+)
 
 
 // to save the notes
@@ -24,13 +32,6 @@ const saveNotes = () => {
     
 }
 
-
-addBtn.addEventListener(
-    "click",
-    function() {
-        addNote();
-    }
-)
 // <div class="note">
 //     <div class="tool">
 //         <i class="fas fa-trash"></i>
@@ -55,6 +56,7 @@ const addNote = (text = "") => {
         "click",
         function(){
             note.remove();
+            saveNotes();
         }
     )
 
@@ -81,15 +83,15 @@ const addNote = (text = "") => {
 // when page load this function call automatically
 (
     function(){ 
-        const lsnotes = JSON.parse(localStorage.getItem("notes"));
+        const lsNotes = JSON.parse(localStorage.getItem("notes"));
         // console.log(lsnotes);
-        if(lsnotes === null){
+        if(lsNotes === null){
             addNote();
         }
         else{
-            lsnotes.forEach(
-                (lsnotes)=>{
-                    addNote(lsnotes);
+            lsNotes.forEach(
+                (lsNote)=>{
+                    addNote(lsNotes);
                 }
             )
         }
